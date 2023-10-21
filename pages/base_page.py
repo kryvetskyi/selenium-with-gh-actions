@@ -1,4 +1,3 @@
-from selenium.webdriver.common.action_chains import ActionChains
 from selenium.webdriver.support import expected_conditions as ec
 from selenium.webdriver.support.ui import WebDriverWait as wait
 
@@ -21,6 +20,3 @@ class BasePage:
         wait(self.app.driver, timeout).until(
             ec.presence_of_element_located(locator)
         )
-
-
-

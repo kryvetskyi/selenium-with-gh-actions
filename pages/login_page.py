@@ -1,5 +1,4 @@
 from selenium.webdriver.common.by import By
-
 from pages.base_page import BasePage
 
 
@@ -26,7 +25,6 @@ class LoginPage(BasePage):
         self.wait_element_to_be_visible(self.KEEP_SIGN_IN_CHECKBOX).click()
         self.wait_element_to_be_visible(self.SUBMIT_BUTTON).click()
 
-
     def logout(self):
         self.wait_elements_to_be_visible(self.LOGGED_IN_USERNAME)[1].click()
         self.wait_element_to_be_visible(self.LOGOUT).click()
@@ -37,8 +35,3 @@ class LoginPage(BasePage):
 
     def get_logged_username(self):
         return self.wait_elements_to_be_visible(self.LOGGED_IN_USERNAME)[1].text
-
-
-
-
-

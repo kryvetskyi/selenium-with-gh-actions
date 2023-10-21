@@ -24,4 +24,3 @@ def app():
     yield fixture
 
     fixture.quit()
-

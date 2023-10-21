@@ -18,5 +18,3 @@ class TestLandingPage:
         result = app.landing_page.search_data_by_search_input()
 
         assert result == 'Search Results:', 'Did not get search Results'
-
-
