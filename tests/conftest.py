@@ -15,13 +15,12 @@ def app():
     base_url = os.getenv('BASE_URL')
 
     options = Options()
-    options.add_argument('--headless')
+    options.add_argument('--headless=new')
     options.add_argument('--no-sandbox')
     options.add_argument('--disable-dev-shm-usage')
 
     fixture = Application(
-        webdriver.Chrome(service=ChromeService(ChromeDriverManager().install(),
-                                               options=options)), base_url)
+        webdriver.Chrome(service=ChromeService(ChromeDriverManager().install()), options=options), base_url)
 
     yield fixture
 
