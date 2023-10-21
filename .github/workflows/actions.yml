@@ -1,0 +1,41 @@
+# simple github-actions workflow
+
+name: selenium test project
+
+on:
+  push:
+    branches: ["main"]
+  pull_request:
+    branches: ["main"]
+
+permissions:
+  contents: read
+
+env:
+  BASE_URL: ${{ secrets.BASE_URL }}
+  USERNAME: ${{ secrets.USERNAME }}
+  PASSWORD: ${{ secrets.PASSWORD }}
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: action/checkout@v3
+    - name: Set Up Python 3.10
+      uses: actions/setup-python@v3
+      with:
+        python-version: "3.10"
+    - name: Install Dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install flake8 pytest
+        if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+    - name: Lint With Flake8
+      run: |
+        flake8 . --count --exit-zero --max-complexity=10 --max-line-length=120 --statistics
+    - name: Run Tests
+      run:
+        pytest
+  
+
