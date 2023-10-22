@@ -1,4 +1,8 @@
 # simple github-actions workflow
+# to run on schedule
+# on:
+#  schedule:
+#   - cron: '*/5 * * * *' -> every 5 minutes
 
 name: selenium test project
 
