@@ -7,13 +7,8 @@
 name: selenium test project
 
 on:
-  workflow_dispatch: # Включение ручного запуска
-    inputs:
-      run-tests: # Параметр для ручного запуска
-        description: 'Run tests manually'
-        required: true
-        # default: 'false' # По умолчанию не запускать
-
+  workflow_dispatch
+  
 permissions:
   contents: write
   pages: write
