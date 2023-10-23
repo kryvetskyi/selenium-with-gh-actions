@@ -1,3 +1,4 @@
+import allure
 from dotenv import load_dotenv
 from helper.generate_user import generate
 import pytest
@@ -10,6 +11,7 @@ load_dotenv()
     (os.getenv('USERNAME'), os.getenv('PASSWORD')),
     generate()
 ])
+@allure.title('Check login')
 def test_login_with_valid_creds(app, username, password):
     if username == os.getenv('USERNAME'):
         app.login_page.login(username, password)
