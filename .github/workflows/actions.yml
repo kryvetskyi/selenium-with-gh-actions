@@ -12,7 +12,7 @@ on:
       run-tests: # Параметр для ручного запуска
         description: 'Run tests manually'
         required: true
-        default: 'false' # По умолчанию не запускать
+        # default: 'false' # По умолчанию не запускать
 
 permissions:
   contents: write
