@@ -44,14 +44,6 @@ jobs:
         run:
           pytest --alluredir=allure_results
 
-  allure:
-    name: Generate Allure Report
-    runs-on: ubuntu-latest
-    needs: test
-
-    steps:
-      - uses: actions/checkout@v2
-
       - name: Get Allure history
         uses: actions/checkout@v2
         if: always()
