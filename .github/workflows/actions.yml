@@ -7,10 +7,12 @@
 name: selenium test project
 
 on:
-  push:
-    branches: ["main"]
-  pull_request:
-    branches: ["main"]
+  workflow_dispatch: # Включение ручного запуска
+    inputs:
+      run-tests: # Параметр для ручного запуска
+        description: 'Run tests manually'
+        required: true
+        default: 'false' # По умолчанию не запускать
 
 permissions:
   contents: read
