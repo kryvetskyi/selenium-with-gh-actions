@@ -1,0 +1,5 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"passed","Mon Oct 23 14:16:28 GMT 2023","Mon Oct 23 14:16:29 GMT 2023","1759","tests","Landing Page","TestLandingPage","","","Check brand name",""
+"passed","Mon Oct 23 14:16:31 GMT 2023","Mon Oct 23 14:16:32 GMT 2023","1071","tests","Landing Page","TestLandingPage","","","Check search input",""
+"passed","Mon Oct 23 14:16:35 GMT 2023","Mon Oct 23 14:16:36 GMT 2023","686","tests","test_login","","","","Check login",""
+"passed","Mon Oct 23 14:16:33 GMT 2023","Mon Oct 23 14:16:34 GMT 2023","1065","tests","test_login","","","","Check login",""
