@@ -1,5 +1,6 @@
 from selenium.webdriver.support import expected_conditions as ec
 from selenium.webdriver.support.ui import WebDriverWait as wait
+from datetime import datetime
 
 
 class BasePage:
@@ -20,3 +21,6 @@ class BasePage:
         wait(self.app.driver, timeout).until(
             ec.presence_of_element_located(locator)
         )
+
+    def make_screenshot(self):
+        self.app.driver.save_screenshot(f'../screenshots/{datetime.now()}-image.png')
